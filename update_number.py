@@ -81,7 +81,7 @@ def update_cron_with_random_time():
     random_minute = random.randint(0, 59)
 
     # Define the new cron job command
-    new_cron_command = f"{random_minute} {random_hour} * * * cd {script_dir} && python3 {os.path.join(script_dir, 'update_number.py')}\n"
+    new_cron_command = f"{random_minute} * * * * cd {script_dir} && python3 {os.path.join(script_dir, 'update_number.py')}\n"
 
     # Get the current crontab
     cron_file = "/tmp/current_cron"
@@ -105,7 +105,7 @@ def update_cron_with_random_time():
     os.system(f"crontab {cron_file}")
     os.remove(cron_file)
 
-    print(f"Cron job updated to run at {random_hour}:{random_minute} tomorrow.")
+    print(f"Cron job updated to run at: {random_minute} minute.")
 
 
 def main():
