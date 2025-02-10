@@ -4,7 +4,7 @@ A Python script that automatically increments a number in a text file, commits t
 
 ## Setup
 
-1. Clone this repository:
+1. Clone this repository: 
 
 ```bash
 git clone https://github.com/Shogun89/fancy_job
